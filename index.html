@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Universo Romântico — Nayd</title>
+
+  <!-- Fonte cursiva romântica -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- fundo animado (elementos flutuantes são gerados via JS) -->
+    <div id="background-layer" aria-hidden="true"></div>
+
+    <!-- Area central com coração SVG e nome -->
+    <main class="center">
+      <div class="heart-wrap" role="img" aria-label="Coração com o nome Nayd">
+        <!-- SVG coração sem preenchimento, contorno pontilhado -->
+        <svg id="heart-svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <!-- path desenhado para formar um coração simétrico e perfeito -->
+          <path id="heart-path"
+                d="M50 82
+                   C18 62, 10 38, 30 24
+                   C40 16, 50 22, 50 34
+                   C50 22, 60 16, 70 24
+                   C90 38, 82 62, 50 82 Z"
+                fill="none" />
+        </svg>
+
+        <!-- Nome central (clicável) -->
+        <button id="nayd" class="nayd" aria-label='Clique para ver declaração de amor'>
+          Nayd
+        </button>
+      </div>
+    </main>
+
+    <!-- Mensagem superior que aparece ao clicar no nome -->
+    <div id="top-message" class="top-message" aria-live="polite"></div>
+
+    <!-- container para textos "Eu te amo" que aparecem ao clicar -->
+    <div id="click-layer" aria-hidden="true"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
